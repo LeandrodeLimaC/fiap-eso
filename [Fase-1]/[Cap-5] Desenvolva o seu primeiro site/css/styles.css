@@ -1,0 +1,22 @@
+@import url("./reset.css");
+@import url("./header.css");
+@import url("./main.css");
+@import url("./footer.css");
+
+:root {
+  --palette-white: #ffffff;
+  --palette-gray: #444444;
+  --palette-primary: #1b8f99;
+  --palette-primary-light: #92c9ce;
+  --palette-secondary: #660000;
+
+  --ff-arial: Arial, Helvetica, sans-serif;
+  --ff-tahoma: Tahoma, Verdana, "Segoe UI", sans-serif;
+}
+
+body {
+  display: grid;
+  margin-inline: auto;
+  width: min(100%, 980px);
+  font-family: var(--ff-arial, Arial);
+}

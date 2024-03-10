@@ -1,0 +1,72 @@
+.main-header {
+  display: flex;
+  flex-direction: column;
+  margin-top: 34px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 12px;
+  height: 45px;
+  color: var(--palette-white);
+  background-color: var(--bg-color);
+}
+
+.nav-container ul {
+  display: flex;
+  gap: 8px;
+  height: 100%;
+}
+
+.nav-container ul li {
+  width: min-content;
+  font-size: 12px;
+  text-transform: uppercase;
+  transition: all ease-in-out 150ms;
+}
+
+.nav-container ul li a {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-inline: 8px;
+  height: 100%;
+}
+
+.nav-container:has(li:hover) li {
+  opacity: 0.7;
+}
+
+.nav-container ul li:hover,
+.nav-container:not(:has(li:hover)) li:focus-within {
+  transform: scale(1.2);
+  background-color: var(--bg-hover-color);
+  color: var(--on-bg-hover-color);
+  opacity: 1;
+}
+
+#banner {
+  height: 340px;
+  background: url("../img/banner.fw.png") no-repeat center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.main-nav {
+  --bg-color: var(--palette-primary);
+  --bg-hover-color: var(--palette-primary-light);
+  --on-bg-hover-color: var(--palette-white);
+}
+
+.secondary-nav {
+  --bg-color: var(--palette-secondary);
+  --bg-hover-color: var(--palette-white);
+  --on-bg-hover-color: var(--palette-secondary);
+}
+
+.main-nav__logo {
+  transform: translateY(-22px);
+  width: 194px;
+  height: 146px;
+}
