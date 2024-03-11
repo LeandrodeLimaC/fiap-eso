@@ -3,11 +3,11 @@ article {
 }
 
 article > section:nth-child(odd) {
-  color: var(--palette-secondary);
+  --color: var(--palette-secondary);
 }
 
 article > section:nth-child(even) {
-  color: var(--palette-primary);
+  --color: var(--palette-primary);
 }
 
 .section-header {
@@ -20,10 +20,11 @@ article > section:nth-child(even) {
 
 .section-header__content {
   width: 100%;
+  margin-bottom: 6px;
 }
 
 .section-header__title {
-  color: inherit;
+  color: var(--color);
   font-size: 22px;
   font-weight: 600;
   line-height: 1;
@@ -33,14 +34,11 @@ article > section:nth-child(even) {
 .section-header__divider {
   width: 100%;
   display: inline-block;
-  border-top: 2px solid currentColor;
+  border-top: 2px solid var(--color);
 }
 
 .section-header__image {
-  min-width: 125px;
-  min-height: 77px;
-  width: 125px;
-  height: 77px;
+  height: 100%;
 }
 
 .card {
@@ -48,8 +46,8 @@ article > section:nth-child(even) {
   height: 100%;
   flex-direction: column;
   border-style: solid;
-  font-family: var(--ff-tahoma);
   border-color: var(--color);
+  font-family: var(--ff-tahoma);
   border-width: 1px;
 }
 
@@ -67,11 +65,11 @@ article > section:nth-child(even) {
 /* Products */
 
 .products-section ul li:nth-child(odd) {
-  color: var(--palette-primary);
+  --color: var(--palette-primary);
 }
 
 .products-section ul li:nth-child(even) {
-  color: var(--palette-secondary);
+  --color: var(--palette-secondary);
 }
 
 .product-card > img {
@@ -86,13 +84,14 @@ article > section:nth-child(even) {
   font-weight: 400;
   text-align: center;
   padding: 4px;
+  color: var(--color);
 }
 
 .product-card__header::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: currentColor;
+  background: var(--color);
   opacity: 0.15;
 }
 
@@ -103,12 +102,13 @@ article > section:nth-child(even) {
   font-family: var(--ff-secondary);
   font-size: 13px;
   margin: 12px 8px 12px;
+  color: var(--color);
 }
 
 .product-card__footer {
   display: flex;
   justify-content: space-between;
-  background-color: currentColor;
+  background-color: var(--color);
   padding-block: 14px;
   padding-inline: 8px;
   align-items: end;
@@ -136,16 +136,16 @@ article > section:nth-child(even) {
 /* Services */
 
 .services-section ul li:nth-child(odd) {
-  color: var(--palette-secondary);
+  --color: var(--palette-secondary);
 }
 
 .services-section ul li:nth-child(even) {
-  color: var(--palette-primary);
+  --color: var(--palette-primary);
 }
 
 .service-card {
   border-width: 1px 1px 8px;
-  border-color: currentColor;
+  border-color: var(--color);
   padding-bottom: 16px;
 }
 
@@ -160,9 +160,10 @@ article > section:nth-child(even) {
   font-size: 17px;
   text-transform: uppercase;
   font-weight: 600;
+  color: var(--color);
 }
 
 .service-card__description {
-  color: inherit;
   font-size: 13px;
+  color: var(--color);
 }
